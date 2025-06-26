@@ -14,19 +14,19 @@ class EventBind extends Component {
     //   this.clickHandler = this.clickHandler.bind(this);
     }
 
-    clickHandler() {
-        this.setState({
-            message:"Goodbye"
-        })
-        console.log(this);
-    }
-
-    // Четвертый способ
-    // clickHandler = () => {
+    // clickHandler() {
     //     this.setState({
     //         message:"Goodbye"
     //     })
+    //     console.log(this);
     // }
+
+    // Четвертый способ
+    clickHandler = () => {
+        this.setState({
+            message:"Goodbye"
+        })
+    }
   render() {
     return (
       <div>
