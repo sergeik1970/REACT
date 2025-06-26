@@ -20,6 +20,14 @@ import './appStyles.css'
 import styles from './appStyles.module.css'
 import Form from './components/Form'
 import LifecycleA from './components/LifecycleA'
+import FragmentDemo from './components/FragmentDemo'
+import Table from './components/Table'
+import PureComp from './components/PureComp'
+import ParentComp from './components/ParentComp'
+import RefsDemo from './components/RefsDemo'
+// import Input from './components/Input'
+import FocusInput from './components/FocusInput'
+import FRParentInput from './components/FRParentInput'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -44,7 +52,14 @@ function App() {
         {/* <Message /> */}
         {/* Если изменить на false, то не будет работать оранжевый цвет */}
         {/* <StyleSheet primary={true} /> */}
-        <LifecycleA />
+        {/* <LifecycleA /> */}
+        {/* <FragmentDemo /> */}
+        {/* <Table /> */}
+        {/* <PureComp /> */}
+        {/* <ParentComp /> */}
+        {/* <RefsDemo /> */}
+        {/* <FocusInput /> */}
+        <FRParentInput />
         
       </div>
       {/* <Message />
