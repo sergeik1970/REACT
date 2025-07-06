@@ -28,6 +28,9 @@ import RefsDemo from './components/RefsDemo'
 // import Input from './components/Input'
 import FocusInput from './components/FocusInput'
 import FRParentInput from './components/FRParentInput'
+import PortalDemo from './components/PortalDemo'
+import Hero from './components/Hero'
+import ErrorBoundary from './components/ErrorBoundary'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -59,8 +62,14 @@ function App() {
         {/* <ParentComp /> */}
         {/* <RefsDemo /> */}
         {/* <FocusInput /> */}
-        <FRParentInput />
-        
+        {/* <FRParentInput /> */}
+        {/* <PortalDemo /> */}
+        <ErrorBoundary>
+          <Hero heroName={"Batman"} />
+          <Hero heroName={"Superman"} />
+          <Hero heroName={"Joker"} />
+        </ErrorBoundary>
+
       </div>
       {/* <Message />
       <Greet name="John" heroName="Superman"><p>Children props</p></Greet>
