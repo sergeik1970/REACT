@@ -31,6 +31,14 @@ import FRParentInput from './components/FRParentInput'
 import PortalDemo from './components/PortalDemo'
 import Hero from './components/Hero'
 import ErrorBoundary from './components/ErrorBoundary'
+import ClickCounter from './components/ClickCounter'
+import HoverCounter from './components/HoverCounter'
+import ClickCounterTwo from './components/ClickCounterTwo'
+import HoverCounterTwo from './components/HoverCounterTwo'
+import User from './components/User'
+import CounterTwo from './components/CounterTwo'
+import ComponentC from './components/ComponentC'
+import { UserProvider } from './components/UserContext'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -64,11 +72,38 @@ function App() {
         {/* <FocusInput /> */}
         {/* <FRParentInput /> */}
         {/* <PortalDemo /> */}
-        <ErrorBoundary>
+        {/* <ErrorBoundary>
           <Hero heroName={"Batman"} />
-          <Hero heroName={"Superman"} />
-          <Hero heroName={"Joker"} />
         </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName={"Superman"} />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName={"Joker"} />
+        </ErrorBoundary> */}
+        {/* <ClickCounter name="Sergey" /> */}
+        {/* <HoverCounter /> */}
+        {/* <ClickCounterTwo />
+        <HoverCounterTwo />
+        <User render={ (isLoggedIn) => isLoggedIn ? "Sergey" : "Guest" } /> */}
+        {/* <CounterTwo render={ (count, incrementCount) => <ClickCounterTwo count={count} incrementCount={incrementCount} /> } />
+        <CounterTwo render={ (count, incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount} /> } /> */}
+
+        <CounterTwo>
+          {(count, incrementCount) => (
+            <ClickCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        </CounterTwo>
+        <CounterTwo>
+          {(count, incrementCount) => (
+            <HoverCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        </CounterTwo>
+        <UserProvider value="Sergey">
+          <ComponentC />
+        </UserProvider>
+        <ComponentC />
+
 
       </div>
       {/* <Message />
